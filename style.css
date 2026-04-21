@@ -1237,6 +1237,11 @@ button {
     height: 28px;
 }
 
+.contato__card-icon .lucide-linkedin {
+    stroke: var(--color-white);
+    fill: none;
+}
+
 .contato__card-label {
     font-family: var(--font-display);
     font-weight: 700;
