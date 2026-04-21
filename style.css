@@ -13,26 +13,26 @@
 :root {
     --color-primary: #00c5be;
     --color-primary-light: #00e0ff;
-    --color-primary-dark: #049b9e;
-    --color-secondary: #00b8d4;
-    --color-cream: #e9f2f3;
+    --color-primary-dark: #009a95;
+    --color-secondary: #008fff;
+    --color-cream: #0a2430;
     --color-lavender: rgba(0, 197, 190, 0.08);
-    --color-purple: #d7feff;
-    --color-black: #dff4f8;
-    --color-true-black: #061b24;
+    --color-purple: #d9f8ff;
+    --color-black: #e8f7fb;
+    --color-true-black: #031019;
     --color-white: #f4feff;
-    --color-gray: #a4c3cb;
+    --color-gray: #8fb1bb;
     --color-gray-light: rgba(0, 197, 190, 0.25);
     
     --font-display: 'Bebas Neue', sans-serif;
     --font-body: 'Bebas Neue', sans-serif;
     --font-heading: 'Nova Oval', 'Bebas Neue', sans-serif;
     
-    --shadow-rest: 0 10px 30px rgba(0, 0, 0, 0.18);
-    --shadow-rest-sm: 0 8px 24px rgba(0, 0, 0, 0.16);
-    --shadow-active: 0 4px 16px rgba(0, 0, 0, 0.14);
-    --shadow-glow: 0 0 40px rgba(0, 197, 190, 0.3);
-    --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --shadow-rest: 0 10px 28px rgba(0, 0, 0, 0.34);
+    --shadow-rest-sm: 0 8px 24px rgba(0, 0, 0, 0.28);
+    --shadow-active: 0 4px 14px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0 0 40px rgba(0, 163, 139, 0.3);
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.12);
     
     --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
@@ -77,13 +77,14 @@ body::before {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background-image:
-        radial-gradient(circle at 20% 40%, rgba(0, 197, 190, 0.06) 0, transparent 42%),
-        radial-gradient(circle at 80% 65%, rgba(0, 224, 255, 0.04) 0, transparent 48%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cg fill='none' stroke='%2300c5be' stroke-width='1' opacity='0.32'%3E%3Cpolygon points='130,18 212,65 212,160 130,208 48,160 48,65'/%3E%3Cpath d='M18 36h52M190 230h56M31 188l28-22M202 32l30-18M90 64l18 16M208 198l24 18'/%3E%3Ccircle cx='76' cy='200' r='7'/%3E%3Cpath d='M132 103h34l16 14-16 14h-34l-16-14z'/%3E%3Cpath d='M108 154c13-22 31-35 54-39 23-4 45 3 68 23'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: cover, cover, 260px 260px;
-    background-repeat: no-repeat, no-repeat, repeat;
-    opacity: 0.05;
+    background:
+        radial-gradient(circle at 10% 18%, rgba(0, 197, 190, 0.06), transparent 30%),
+        radial-gradient(circle at 85% 12%, rgba(0, 197, 190, 0.05), transparent 24%),
+        radial-gradient(circle at 82% 74%, rgba(0, 143, 255, 0.06), transparent 28%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cg fill='none' stroke='%2300c5be' stroke-width='1' opacity='0.28'%3E%3Cpolygon points='130,20 206,64 206,150 130,194 54,150 54,64'/%3E%3Ccircle cx='56' cy='204' r='8'/%3E%3Cpath d='M20 48h40M186 236h54M32 182l24-18M196 34l30-20M126 106h28l14 12-14 12h-28l-14-12zM104 152c16-24 34-37 55-40 24-3 46 6 66 25'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover, cover, cover, 260px 260px;
+    background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+    opacity: 0.06;
     z-index: -1;
 }
 
@@ -99,17 +100,6 @@ section::before {
     pointer-events: none;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(0, 197, 190, 0.04), rgba(0, 0, 0, 0.02));
     opacity: 0.8;
-}
-
-section::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background:
-        radial-gradient(circle at 12% 25%, rgba(0, 197, 190, 0.06), transparent 30%),
-        radial-gradient(circle at 88% 75%, rgba(0, 224, 255, 0.05), transparent 35%);
-    opacity: 0.5;
 }
 
 a {
@@ -165,11 +155,11 @@ button {
 }
 
 .header--scrolled .nav {
-    background: rgba(10, 37, 49, 0.74);
+    background: rgba(7, 31, 41, 0.86);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
-    border-color: rgba(0, 197, 190, 0.28);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+    border-color: rgba(0, 197, 190, 0.3);
 }
 
 .nav {
@@ -178,11 +168,11 @@ button {
     justify-content: space-between;
     max-width: var(--max-width);
     margin: 0 auto;
-    min-height: 72px;
-    padding: 0.52rem 1.35rem;
-    background: rgba(8, 35, 46, 0.58);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    min-height: var(--header-height);
+    padding: 0.65rem 1.25rem 0.65rem 1rem;
+    background: rgba(9, 35, 46, 0.66);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(0, 197, 190, 0.24);
     border-radius: 999px;
     transition: all 0.3s var(--ease-smooth);
@@ -225,7 +215,7 @@ button {
     line-height: 1.15;
     padding: 0.45rem 0.95rem;
     border-radius: var(--radius-pill);
-    color: rgba(223, 244, 248, 0.88);
+    color: rgba(232, 247, 251, 0.86);
     transition: all 0.3s var(--ease-spring);
     position: relative;
 }
@@ -238,7 +228,7 @@ button {
     transform: translateX(-50%);
     width: 0;
     height: 3px;
-    background: var(--color-primary);
+    background: linear-gradient(135deg, #00c5be, #0084ff);
     border-radius: var(--radius-pill);
     transition: width 0.3s var(--ease-spring);
 }
@@ -262,16 +252,16 @@ button {
     background: linear-gradient(135deg, #00c5be, #0084ff);
     color: var(--color-white);
     border-radius: var(--radius-pill);
-    border: 1px solid rgba(0, 224, 255, 0.5);
-    box-shadow: 0 10px 26px rgba(0, 197, 190, 0.32);
+    border: 1px solid rgba(0, 224, 255, 0.44);
+    box-shadow: 0 0 16px rgba(0, 197, 190, 0.22), 0 10px 24px rgba(0, 0, 0, 0.24);
     transition: all 0.2s var(--ease-spring);
     white-space: nowrap;
     align-self: center;
 }
 
 .nav__cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 20px rgba(0, 197, 190, 0.4), 0 14px 26px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0, 197, 190, 0.5);
 }
 
 .nav__cta:active {
@@ -319,7 +309,7 @@ button {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(12, 34, 43, 0.46), rgba(15, 48, 62, 0.2));
+    background: linear-gradient(180deg, rgba(9, 35, 47, 0.4), rgba(7, 29, 39, 0.22));
 }
 
 .hero__bg {
@@ -467,7 +457,7 @@ button {
 .hero__subtitle {
     font-family: var(--font-body);
     font-size: 1.05rem;
-    color: #b9d7de;
+    color: #9fc1c9;
     line-height: 1.7;
     margin-bottom: 2rem;
     opacity: 0;
@@ -485,9 +475,9 @@ button {
     background: linear-gradient(135deg, #00c5be, #0084ff);
     color: var(--color-white);
     border-radius: var(--radius-pill);
-    border: 1px solid rgba(0, 224, 255, 0.55);
-    box-shadow: var(--shadow-rest);
-    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 224, 255, 0.5);
+    box-shadow: 0 0 16px rgba(0, 197, 190, 0.2), var(--shadow-rest);
+    transition: all 0.15s var(--ease-spring);
     opacity: 0;
     animation: fadeSlideUp 0.8s var(--ease-spring) 0.85s forwards;
 }
@@ -500,8 +490,8 @@ button {
 
 .hero__cta:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 20px rgba(0, 197, 190, 0.5), 0 12px 24px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(135deg, #00d2ca, #1495ff);
+    box-shadow: 0 0 20px rgba(0, 197, 190, 0.5);
+    background: linear-gradient(135deg, #00d7cf, #00a4ff);
 }
 
 .hero__cta:hover svg {
@@ -556,9 +546,9 @@ button {
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), inset 0 0 18px rgba(0, 197, 190, 0.12);
-    transition: all 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
     top: 50%;
     left: 50%;
     margin-top: -180px;
@@ -567,8 +557,7 @@ button {
 
 .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 25px rgba(0, 197, 190, 0.3), 0 14px 36px rgba(0, 0, 0, 0.35);
-    border-color: rgba(0, 224, 255, 0.56);
+    box-shadow: 0 0 25px rgba(0, 197, 190, 0.3);
 }
 
 .card__icon {
@@ -643,7 +632,7 @@ button {
 /* ========== SOBRE ========== */
 .sobre {
     padding: 8rem 2rem;
-    background: linear-gradient(180deg, rgba(16, 49, 62, 0.34), rgba(16, 42, 53, 0.24));
+    background: linear-gradient(180deg, rgba(8, 31, 42, 0.28), rgba(7, 27, 36, 0.42));
     position: relative;
 }
 
@@ -721,14 +710,14 @@ button {
     max-width: 500px;
     width: 100%;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
 }
 
 .sobre__skills-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 20px rgba(0, 197, 190, 0.35), 0 16px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(0, 197, 190, 0.3);
 }
 
 .sobre__skills-icon {
@@ -772,7 +761,7 @@ button {
 .projetos {
     position: relative;
     padding: 8rem 2rem;
-    background: linear-gradient(180deg, rgba(9, 32, 42, 0.22), rgba(11, 40, 52, 0.36));
+    background: linear-gradient(180deg, rgba(4, 23, 32, 0.35), rgba(7, 30, 39, 0.44));
     overflow: hidden;
 }
 
@@ -842,16 +831,18 @@ button {
     overflow: hidden;
     background: rgba(0, 197, 190, 0.08);
     border: 1px solid rgba(0, 197, 190, 0.2);
-    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s var(--ease-spring);
     cursor: pointer;
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
 .projetos__card:hover {
-    transform: translateY(-6px) scale(1.01);
-    border-color: rgba(0, 224, 255, 0.45);
-    box-shadow: 0 0 25px rgba(0, 197, 190, 0.3), 0 12px 34px rgba(0, 0, 0, 0.35);
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(0, 224, 255, 0.5);
+    box-shadow: 0 0 25px rgba(0, 197, 190, 0.3);
 }
 
 .projetos__card-inner {
@@ -910,8 +901,8 @@ button {
     color: var(--color-white);
     border-radius: var(--radius-pill);
     border: 1px solid rgba(0, 224, 255, 0.45);
-    box-shadow: 0 10px 22px rgba(0, 197, 190, 0.24);
-    transition: all 0.3s ease;
+    box-shadow: 0 0 14px rgba(0, 197, 190, 0.2);
+    transition: all 0.15s var(--ease-spring);
 }
 
 .projetos__card-btn:hover {
@@ -953,7 +944,7 @@ button {
 /* ========== SOLUÇÕES ========== */
 .solucoes {
     padding: 8rem 2rem;
-    background: linear-gradient(180deg, rgba(12, 41, 54, 0.2), rgba(9, 31, 40, 0.32));
+    background: linear-gradient(180deg, rgba(8, 30, 40, 0.35), rgba(9, 34, 45, 0.42));
     position: relative;
 }
 
@@ -999,6 +990,7 @@ button {
     padding: 2.5rem;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(10px);
@@ -1019,7 +1011,7 @@ button {
 
 .solucoes__item:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 25px rgba(0, 197, 190, 0.3), 0 14px 34px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 25px rgba(0, 197, 190, 0.3);
 }
 
 .solucoes__item:hover::before {
@@ -1091,7 +1083,7 @@ button {
 /* ========== DESTAQUES ========== */
 .destaques {
     padding: 8rem 2rem;
-    background: linear-gradient(180deg, rgba(12, 38, 49, 0.24), rgba(8, 26, 35, 0.32));
+    background: linear-gradient(180deg, rgba(8, 30, 40, 0.26), rgba(7, 27, 36, 0.46));
     position: relative;
 }
 
@@ -1149,8 +1141,8 @@ button {
     position: relative;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    border: 1px solid rgba(0, 197, 190, 0.26);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 197, 190, 0.25);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
 }
 
 .destaques__item-img {
@@ -1197,7 +1189,7 @@ button {
 /* ========== CONTATO ========== */
 .contato {
     padding: 8rem 2rem;
-    background: linear-gradient(180deg, rgba(6, 31, 42, 0.44), rgba(8, 22, 31, 0.62));
+    background: linear-gradient(180deg, rgba(5, 24, 33, 0.42), rgba(4, 19, 28, 0.72));
     border-top: 1px solid rgba(0, 197, 190, 0.2);
     position: relative;
     overflow: hidden;
@@ -1275,7 +1267,7 @@ button {
 
 .contato__card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 25px rgba(0, 197, 190, 0.3), 0 14px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 25px rgba(0, 197, 190, 0.3);
 }
 
 .contato__card:active {
@@ -1327,7 +1319,7 @@ button {
 /* ========== FOOTER ========== */
 .footer {
     padding: 2rem;
-    background: rgba(4, 20, 28, 0.9);
+    background: #03141f;
     text-align: center;
 }
 
@@ -1566,6 +1558,9 @@ button {
         left: 1rem;
         right: 1rem;
         flex-direction: column;
+        background: rgba(7, 30, 41, 0.96);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(0, 197, 190, 0.3);
         background: rgba(9, 34, 45, 0.95);
         backdrop-filter: blur(20px);
         border: 1px solid rgba(0, 197, 190, 0.25);
