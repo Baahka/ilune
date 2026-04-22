@@ -21,7 +21,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
@@ -127,7 +127,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
     background: rgba(2, 12, 22, 0.85);
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), var(--neon-shadow);
 }
-.nav__logo-img { height: 36px; }
+.nav__logo-img { height: 39px; }
 .nav__links { display: flex; gap: 0.3rem; }
 .nav__link {
     color: var(--text-soft);
